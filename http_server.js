@@ -21,7 +21,7 @@ app.use(express.static('public'));
 // init the data store
 db.defaults({ users: [] }).write();
 
-let port = process.env.PORT || 3000
+let port = process.env.PORT || 3000;
 
 // return all users
 app.get('/data', function (req, res) {
