@@ -9,8 +9,8 @@ const cors = require('cors');
 var corsOptions = {
     origin: '*',
     methods: 'GET,PUT,POST',
-    allowedHeaders: ['Content-Type', 'Authorization', 'Range'],
-    exposedHeaders: ['Content-Range', 'X-Content-Range', 'Accept-Ranges', 'Content-Encoding', 'Content-Length'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Range', '*'],
+    exposedHeaders: ['Content-Range', 'X-Content-Range', 'Accept-Ranges', 'Content-Encoding', 'Content-Length', '*'],
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
