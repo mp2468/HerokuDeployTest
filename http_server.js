@@ -6,16 +6,8 @@ const adapter = new fs('db.json');
 const db = low(adapter);
 const cors = require('cors');
 
-var corsOptions = {
-    origin: '*',
-    methods: 'GET,PUT,POST',
-    allowedHeaders: ['Content-Type', 'Authorization', 'Range', '*'],
-    exposedHeaders: ['Content-Range', 'X-Content-Range', 'Accept-Ranges', 'Content-Encoding', 'Content-Length', '*'],
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
-
 // allow cross-origin resource sharing (CORS)
-app.use(cors(corsOptions));
+app.use(cors());
 
 // data parser - used to parse post data
 var bodyParser = require('body-parser');
